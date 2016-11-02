@@ -1,55 +1,40 @@
 ---
 layout: post
-title: Project
-description: a project with a background image
-img: /assets/img/12.jpg
+title: SSLVQ 
+description: Self-Supervised Learning Vector Quantization
+img: /assets/img/sslvq.png
 ---
 
-Every project has a beautiful feature shocase page. It's easy to include images, in a flexible 3-column grid format. Make your photos 1/3, 2/3, or full width.
+# [SSLVQ](https://github.com/barryridge/SSLVQ): A self-supervised online multi-view learning vector quantization framework for object affordance learning.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+***
 
-	---
-	layout: post
-	title: Project
-	description: a project with a background image
-	img: /assets/img/12.jpg
-	---
+SSLVQ is a Matlab library distributed to accompany the publication of my [Ph.D. thesis](http://eprints.fri.uni-lj.si/2888/) and [2015 IJARS journal article](http://arx.sagepub.com/content/12/3/24.full) and was developed in order to enable developmental learning of object affordance categories for autonomous robots.
 
-
-<div class="img_row">
-	<img class="col one" src="{{ site.baseurl }}/assets/img/1.jpg" alt="" title="example image"/>
-	<img class="col one" src="{{ site.baseurl }}/assets/img/2.jpg" alt="" title="example image"/>
-	<img class="col one" src="{{ site.baseurl }}/assets/img/3.jpg" alt="" title="example image"/>
-</div>
+<center>
+<img src="{{ site.baseurl }}/assets/img/object_affordance_learning_scenario.png" width="80%" alt="" title="Our object affordance learning scenario."/>
+</center>
 <div class="col three caption">
-	Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+	Our object affordance learning scenario.
 </div>
-<div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/assets/img/5.jpg" alt="" title="example image"/>
-</div>
+
+*Multi-view learning*, sometimes also referred to using the terms 'cross-modal learning', 'multi-modal learning' or 'co-clustering' is a type of machine learning where, rather than being isolated to a single feature space, learning is instead performed over multiple separate feature spaces, otherwise known as ‘data views’ or ‘modalities’, in which data co-occur. Given this common theme, the learning goal may otherwise differ depending on the particular context. In our object affordance learning scenario, object properties such as shape features define the feature space in one data view, the input space $$ X \subseteq \mathbb{R}^m $$, whereas object effects observed from interaction, such as motion features and changes in shape features, define the feature space in another data view, the output space $$ Y \subseteq \mathbb{R}^n $$. We assume that matching data co-occur in each of them.
+
+<center>
+<img src="{{ site.baseurl }}/assets/img/sslvq_small.png" alt="" title="SSLVQ cross-view Hebbian projection visualisation."/>
+</center>
 <div class="col three caption">
-	This image can also have a caption. It's like magic.
+	Visualisation of SSLVQ cross-view Hebbian projection.
 </div>
 
-You can also put regular text between your rows of images. Say you wanted to write a little bit about your project before you posted the rest of the images. You describe how you toiled, sweated, *bled* for your project, and then.... you reveal it's glory in the next row of images.
+Our learning goal is to find significant clusters in $$ Y $$ (upper part of above figure) that may be projected back to $$ X $$ (lower part of above figure) and used as class labels to train a classifier, thus forming a mapping $$ f : \mathbb{R}^m \rightarrow \mathbb{N} $$ from input space feature vectors to class labels representing affordances grounded in output space feature clusters. We consider this as a multi-view learning problem given that there is a natural separation between the two feature spaces under consideration, which model potential causes and potential effects respectively, and also as a *self-supervised learning* problem given that the class clusters must be discovered in output space $$ Y $$ in an unsupervised manner before being exploited
+for supervised discriminative learning in input space $$ X $$, a process that must occur online, dynamically and autonomously.
 
-
-<div class="img_row">
-	<img class="col two" src="{{ site.baseurl }}/assets/img/6.jpg" alt="" title="example image"/>
-	<img class="col one" src="{{ site.baseurl }}/assets/img/11.jpg" alt="" title="example image"/>
-</div>
-<div class="col three caption">
-	You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-<br/><br/><br/>
-
-
-The code is simple. Just add a col class to your image, and another class specifying the width: one, two, or three columns wide. Here's the code for the last row of images above:
-
-	<div class="img_row">
-	  <img class="col two" src="/img/6.jpg"/>
-	  <img class="col one" src="/img/11.jpg"/>
-	</div>
+Our solution to this problem involves representing each of the data views
+via *vector quantization* using codebooks of prototype vectors
+$$ W = \{ {\mathbf w}_j \in \mathbb{R}^{m} \,\left|\, j = 1,\ldots,M \right. \} $$
+for the input space and
+$$ V = \{ {\mathbf v}_k \in \mathbb{R}^{n} \,\left|\, k = 1,\ldots,N \right. \} $$ for the output space, respectively,
+approximating the data distributions in each view.
+We train the codebooks in each view using combinations of the *self-organizing map (SOM)* algorithm and extended forms of the *learning vector quantization (LVQ)* algorithm, while also training the cross-view weights that connect them using *Hebbian learning*.
+The interested reader is referred to [the IJARS paper](http://arx.sagepub.com/content/12/3/24.full) for further details.

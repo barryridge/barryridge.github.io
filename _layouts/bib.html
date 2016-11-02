@@ -9,7 +9,11 @@
   {% if entry.type == "thesis" %}
     {{reference}}
   {% else %}
-    <span class="title">{{entry.title}}.</span>
+    {% if link == "" %}
+      <span class="title">{{entry.title}}.</span>
+    {% else %}
+      <a href="{{link}}" target="_blank"><span class="title">{{entry.title}}.</span></a>
+    {% endif %}
     <span class="author">
       {% for author in entry.author_array %}
         {% unless forloop.last %}

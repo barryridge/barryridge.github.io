@@ -2,31 +2,30 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-name: Your Name
-email: you@example.com
+name: Barry Ridge
+email: barry.ridge@ijs.si
 description: > # this means to ignore newlines until "url:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Barry Ridge, postdoctoral researcher. Learning to let robots learn.
 
-url:  # the base hostname & protocol for your site
-baseurl: /al-folio # the subpath of your site, e.g. /blog/
+url: "https://barryridge.github.io/" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
 
 # Social
-github_username: # put your github username
-twitter_username: # put your twitter username
-linkedin_username: # put your linkedin username
-scholar_authorid: # put your google scholar author id
+github_username: barryridge # put your github username
+twitter_username: barryridge # put your twitter username
+linkedin_username: barry-ridge # put your linkedin username
+scholar_authorid: oScEUMkAAAAJ # put your google scholar author id
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  I'm probably best contacted by e-mail.
 
 # Footer text
 footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 
 # Blog
-blog_name: al-folio
-blog_description: simple whitespace theme for academics
+blog_name: barog
+blog_description: learnings on learning machines<br>ramblings on rambling leanings
 
 # Collections
 collections:
@@ -38,9 +37,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
-  poetry:
-    output: true
-    permalink: /poetry/:path/
+#   poetry:
+#     output: true
+#     permalink: /poetry/:path/
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -67,7 +66,7 @@ gems:
 # Jekyll-Scholar
 scholar:
 
-  last_name: Einstein
+  last_name: Ridge
 
   style: apa
   locale: en
@@ -87,6 +86,8 @@ scholar:
   details_link: Details
 
   query: "@*"
+
+  repository: /papers/
 
 # -----------------------------------------------------------------------------
 # Other advanced settings (don't touch if you are not sure)
