@@ -1,0 +1,24 @@
+{
+  "name": "barryridge.github.io",
+  "homepage": "https://github.com/barryridge/barryridge.github.io",
+  "authors": [
+    "Barry Ridge <barry.ridge@gmail.com>"
+  ],
+  "description": "Barry Ridge, postdoctoral researcher. Learning to let robots learn.",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "jquery-ui": "^1.12.1",
+    "fitvids": "^1.2.0",
+    "letteringjs": "^0.7.0"
+  }
+}
