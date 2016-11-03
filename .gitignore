@@ -5,3 +5,6 @@ _site
 .swo
 .swp
 .old
+/bower_components/
+/node_modules/
+/vendor/

@@ -1,0 +1,22 @@
+{
+  "name": "barryridge.github.io",
+  "version": "0.0.0",
+  "description": "Barry Ridge, postdoctoral researcher. Learning to let robots learn.",
+  "main": "_site/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barryridge/barryridge.github.io.git"
+  },
+  "author": "Barry Ridge <barry.ridge@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barryridge/barryridge.github.io/issues"
+  },
+  "homepage": "https://github.com/barryridge/barryridge.github.io#readme",
+  "devDependencies": {
+    "grunt-build-control": "^0.7.1"
+  }
+}
