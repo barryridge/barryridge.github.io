@@ -82,7 +82,7 @@ module.exports = function(grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com:tscholak/tscholak.github.io.git',
+          remote: 'git@github.com:barryridge/barryridge.github.io.git',
           branch: 'master'
         }
       }
