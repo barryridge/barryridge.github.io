@@ -7,9 +7,9 @@ email: barry.ridge@ijs.si
 description: > # this means to ignore newlines until "url:"
   Barry Ridge, postdoctoral researcher. Learning to let robots learn.
 
-url: "https://barryridge.github.io/" # the base hostname & protocol for your site
-domain_name: "https://barryridge.github.io/"
-baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://barryridge.github.io" # the base hostname & protocol for your site
+# domain_name: "https://barryridge.github.io/"
+baseurl: ""  # the subpath of your site, e.g. /blog/
 
 # Social
 github_username: barryridge # put your github username
