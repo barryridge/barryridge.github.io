@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Barry Ridge | ACat ADT Tools</title>
+  <meta name="description" content="Barry Ridge, postdoctoral researcher. Learning to let robots learn.
+">
+
+  <link rel="stylesheet" href="http://localhost:4000//assets/css/main.css">
+  <link rel="canonical" href="http://localhost:4000//projects/2_project/">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <nav class="site-nav">
+
+      <div class="trigger">
+        <!-- About -->
+        <a class="page-link" href="http://localhost:4000//">about</a>
+
+        <!-- Blog -->
+        <a class="page-link" href="http://localhost:4000//blog/">blog</a>
+
+        <!-- Pages -->
+        
+          
+        
+          
+        
+          
+        
+          
+            <a class="page-link" href="http://localhost:4000//projects/">projects</a>
+          
+        
+          
+            <a class="page-link" href="http://localhost:4000//publications/">publications</a>
+          
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">ACat ADT Tools</h1>
+    <p class="post-meta">November 3, 2016</p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="acat-adt-toolshttpsgithubcombarryridgeacat-adt-tools-a-suite-of-tools-for-creating-and-manipulating-adts-action-data-tables-for-the-eu-fp7-acat-projecthttpwwwacat-projecteu"><a href="https://github.com/barryridge/acat-adt-tools">ACat ADT Tools</a>: A suite of tools for creating and manipulating ADTs (Action Data Tables) for the <a href="http://www.acat-project.eu/">EU FP7 ACat project</a>.</h1>
+
+<hr />
+
+<p>The ACat ADT Tools suite is a Matlab library for creating and manipulating ADTs (Action Data Tables) for the EU FP7 ACat project, consisting of:</p>
+
+<ol>
+  <li>
+    <p>adttool:
+ A tool that generates new, or populates existing, ADT XML files using ROS bag recordings.</p>
+  </li>
+  <li>
+    <p>adteditor:
+ A GUI editor that acts as an interface to adttool in order to make certain tasks easier.</p>
+  </li>
+</ol>
+
+<center>
+<img src="//assets/img/acat_adt_editor.png" width="80%" alt="" title="ACat ADT GUI editor." />
+</center>
+<div class="col three caption">
+	ACat ADT GUI editor
+</div>
+
+<p>The GUI editor allows for ROS bag files to be opened in Matlab and examined with a
+‘video editor’ type of interface, where the recorded data trajectories may be displayed on a timeline
+accompanied by visualisations of RGB and depth data in separate windows.
+This is not too dissimilar to the <code>rqt_bag</code> tool that comes bundled with ROS,
+but it adds additional types of functionality that were specific to the needs of our project.
+The trajectory data may be broken into ‘action chunks’ using a simple click-and-drag interface.
+The action chunks may be subsequently labelled depending on what task the recorded robot
+was engaged in at the time, e.g. “Approach hole” or “Insert peg”.
+After the data has been chunked, a <a href="https://scholar.google.de/citations?user=2xCdZQcAAAAJ&amp;hl=en"><em>semantic event chain (SEC)</em></a>
+may be specified using dynamically generated checkboxes (see bottom-right of figure).
+Finally, an action data table may be exported to an XML file that contains all of the
+relevant information regarding the action chunks, timings, SEC table, etc.</p>
+
+  </article>
+
+  
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+  	<p class="small">
+    © Copyright 2016 Barry Ridge.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+</p>
+  </div>
+
+</footer>
+
+
+    <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="http://localhost:4000//assets/js/common.js"></script>
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+<script src="http://localhost:4000//assets/js/katex.js"></script>
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="http://localhost:4000//assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://localhost:4000//assets/css/academicons.min.css">
+
+
+  </body>
+
+</html>

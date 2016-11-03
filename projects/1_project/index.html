@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Barry Ridge | SSLVQ</title>
+  <meta name="description" content="Barry Ridge, postdoctoral researcher. Learning to let robots learn.
+">
+
+  <link rel="stylesheet" href="http://localhost:4000//assets/css/main.css">
+  <link rel="canonical" href="http://localhost:4000//projects/1_project/">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <nav class="site-nav">
+
+      <div class="trigger">
+        <!-- About -->
+        <a class="page-link" href="http://localhost:4000//">about</a>
+
+        <!-- Blog -->
+        <a class="page-link" href="http://localhost:4000//blog/">blog</a>
+
+        <!-- Pages -->
+        
+          
+        
+          
+        
+          
+        
+          
+            <a class="page-link" href="http://localhost:4000//projects/">projects</a>
+          
+        
+          
+            <a class="page-link" href="http://localhost:4000//publications/">publications</a>
+          
+        
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">SSLVQ</h1>
+    <p class="post-meta">November 3, 2016</p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="sslvqhttpsgithubcombarryridgesslvq-a-self-supervised-online-multi-view-learning-vector-quantization-framework-for-object-affordance-learning"><a href="https://github.com/barryridge/SSLVQ">SSLVQ</a>: A self-supervised online multi-view learning vector quantization framework for object affordance learning.</h1>
+
+<hr />
+
+<p>SSLVQ is a Matlab library distributed to accompany the publication of my <a href="http://eprints.fri.uni-lj.si/2888/">Ph.D. thesis</a> and <a href="http://arx.sagepub.com/content/12/3/24.full">2015 IJARS journal article</a> and was developed in order to enable developmental learning of object affordance categories for autonomous robots.</p>
+
+<center>
+<img src="//assets/img/object_affordance_learning_scenario.png" width="80%" alt="" title="Our object affordance learning scenario." />
+</center>
+<div class="col three caption">
+	Our object affordance learning scenario.
+</div>
+
+<p><em>Multi-view learning</em>, sometimes also referred to using the terms ‘cross-modal learning’, ‘multi-modal learning’ or ‘co-clustering’ is a type of machine learning where, rather than being isolated to a single feature space, learning is instead performed over multiple separate feature spaces, otherwise known as ‘data views’ or ‘modalities’, in which data co-occur. Given this common theme, the learning goal may otherwise differ depending on the particular context. In our object affordance learning scenario, object properties such as shape features define the feature space in one data view, the input space <script type="math/tex">X \subseteq \mathbb{R}^m</script>, whereas object effects observed from interaction, such as motion features and changes in shape features, define the feature space in another data view, the output space <script type="math/tex">Y \subseteq \mathbb{R}^n</script>. We assume that matching data co-occur in each of them.</p>
+
+<center>
+<img src="//assets/img/sslvq_small.png" alt="" title="SSLVQ cross-view Hebbian projection visualisation." />
+</center>
+<div class="col three caption">
+	Visualisation of SSLVQ cross-view Hebbian projection.
+</div>
+
+<p>Our learning goal is to find significant clusters in <script type="math/tex">Y</script> (upper part of above figure) that may be projected back to <script type="math/tex">X</script> (lower part of above figure) and used as class labels to train a classifier, thus forming a mapping <script type="math/tex">f : \mathbb{R}^m \rightarrow \mathbb{N}</script> from input space feature vectors to class labels representing affordances grounded in output space feature clusters. We consider this as a multi-view learning problem given that there is a natural separation between the two feature spaces under consideration, which model potential causes and potential effects respectively, and also as a <em>self-supervised learning</em> problem given that the class clusters must be discovered in output space <script type="math/tex">Y</script> in an unsupervised manner before being exploited
+for supervised discriminative learning in input space <script type="math/tex">X</script>, a process that must occur online, dynamically and autonomously.</p>
+
+<p>Our solution to this problem involves representing each of the data views
+via <em>vector quantization</em> using codebooks of prototype vectors
+<script type="math/tex">W = \{ {\mathbf w}_j \in \mathbb{R}^{m} \,\left|\, j = 1,\ldots,M \right. \}</script>
+for the input space and
+<script type="math/tex">V = \{ {\mathbf v}_k \in \mathbb{R}^{n} \,\left|\, k = 1,\ldots,N \right. \}</script> for the output space, respectively,
+approximating the data distributions in each view.
+We train the codebooks in each view using combinations of the <em>self-organizing map (SOM)</em> algorithm and extended forms of the <em>learning vector quantization (LVQ)</em> algorithm, while also training the cross-view weights that connect them using <em>Hebbian learning</em>.
+The interested reader is referred to <a href="http://arx.sagepub.com/content/12/3/24.full">the IJARS paper</a> for further details.</p>
+
+  </article>
+
+  
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+  	<p class="small">
+    © Copyright 2016 Barry Ridge.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+</p>
+  </div>
+
+</footer>
+
+
+    <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="http://localhost:4000//assets/js/common.js"></script>
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+<script src="http://localhost:4000//assets/js/katex.js"></script>
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="http://localhost:4000//assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://localhost:4000//assets/css/academicons.min.css">
+
+
+  </body>
+
+</html>
