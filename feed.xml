@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>barog - Barry Ridge's Blog</title>
+    <description>Learnings on learning machines; ramblings on rambling leanings.
+</description>
+    <link>https://barryridge.github.io</link>
+    <atom:link href="https://barryridge.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Arrival</title>
+        <description>&lt;p&gt;Today I am launching my new website and blog.
+I hope to make this endeavour be about more than just solidifying my ‘online presence’.
+Writing regularly is important for a working academic and it can help to serve a number of functions.
+Dissemination is of course the most obvious one, but what about motivation?
+I think that by placing an onus upon oneself to write something regularly via a public blog,
+a type of &lt;a href=&quot;https://en.wikipedia.org/wiki/Positive_feedback&quot;&gt;positive feedback loop&lt;/a&gt; can be engendered
+that (hopefully!) results in getting more actual work done, owing to the need to actually have something
+to write about, that in turn results in writing more in order to report on the work that
+was done, that in turn results in doing more work in order to have something more to write about,
+and so on ad infinitum.&lt;/p&gt;
+
+&lt;p&gt;The name &lt;code&gt;barog&lt;/code&gt; that I have chosen for the blog, beyond being something of an amalgamation of my own name and
+of the word ‘blog’, is also a throwback to my childhood.
+My mother would often refer to me as ‘baróg’ which itself is an amalgamation of my own name and the
+Irish word ‘óg’, which means ‘young’.  While I am not quite as young as I was back then,
+I am not quite dead yet either.  Perhaps this blog and its title can serve to remind me that
+while there is much to be done, there is yet time to do it.&lt;/p&gt;
+
+&lt;p&gt;And on that note, perhaps I should return to work in order that I might have more to write about.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QY9oWfkKt6A&quot;&gt;Be seeing you!&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 03 Nov 2016 12:00:00 +0100</pubDate>
+        <link>https://barryridge.github.io//blog/2016/arrival/</link>
+        <guid isPermaLink="true">https://barryridge.github.io//blog/2016/arrival/</guid>
+      </item>
+    
+  </channel>
+</rss>
+
