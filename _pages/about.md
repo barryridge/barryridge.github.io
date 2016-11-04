@@ -1,7 +1,7 @@
 ---
 layout: about
 permalink: /about/
-title: Barry Ridge
+title: barry ridge
 description: Postdoctoral researcher.  Learning to let robots learn.
 
 profile:
