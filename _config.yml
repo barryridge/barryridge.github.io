@@ -2,10 +2,10 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-name: Barry Ridge
-email: barry.ridge@ijs.si
+name: barog - Barry Ridge's Blog
+email: barry.ridge@gmail.com
 description: > # this means to ignore newlines until "url:"
-  Barry Ridge, postdoctoral researcher. Learning to let robots learn.
+  Learnings on learning machines; ramblings on rambling leanings.
 
 url: "https://barryridge.github.io" # the base hostname & protocol for your site
 # domain_name: "https://barryridge.github.io/"

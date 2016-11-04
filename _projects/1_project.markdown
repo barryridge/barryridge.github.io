@@ -38,3 +38,4 @@ $$ V = \{ {\mathbf v}_k \in \mathbb{R}^{n} \,\left|\, k = 1,\ldots,N \right. \} 
 approximating the data distributions in each view.
 We train the codebooks in each view using combinations of the *self-organizing map (SOM)* algorithm and extended forms of the *learning vector quantization (LVQ)* algorithm, while also training the cross-view weights that connect them using *Hebbian learning*.
 The interested reader is referred to [the IJARS paper](http://arx.sagepub.com/content/12/3/24.full) for further details.
+The project code is not well optimized, organised, or maintained, but I am preserving it on Github for posterity and potential future inspiration.

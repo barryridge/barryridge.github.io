@@ -1,7 +1,7 @@
 ---
 layout: about
-permalink: /
-title: barry ridge
+permalink: /about/
+title: Barry Ridge
 description: Postdoctoral researcher.  Learning to let robots learn.
 
 profile:
