@@ -8,7 +8,7 @@ description: > # this means to ignore newlines until "url:"
   Learnings on learning machines; ramblings on rambling leanings.
 
 url: "https://barryridge.github.io" # the base hostname & protocol for your site
-# domain_name: "https://barryridge.github.io/"
+domain_name: "https://www.barog.net"
 baseurl: ""  # the subpath of your site, e.g. /blog/
 
 # Social
