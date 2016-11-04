@@ -3,17 +3,27 @@
 # Run this script from site root to deploy to Github Pages.
 
 # Build site with Grunt
-echo "Building site with Grunt"
+echo "Building site with Grunt..."
 grunt -v build
 
 # Git add
+echo "Adding source changes..."
 git add -A
 
 # Git commit
-git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
+echo
+echo "Committing source changes..."
+echo
+git commit --allow-empty -m "Updating and deploying."
 
 # Git push
+echo
+echo "Pushing source changes..."
+echo
 git push origin source
 
 # Grunt deploy
+echo
+echo "Deploying built site with Grunt..."
+echo
 grunt -v deploy
