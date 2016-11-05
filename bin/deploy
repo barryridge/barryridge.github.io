@@ -14,7 +14,12 @@ git add -A
 echo
 echo "Committing source changes..."
 echo
-git commit --allow-empty -m "Updating and deploying."
+if [ $# -eq 0 ]
+then
+  git commit --allow-empty -m "Updating and deploying."
+else
+  git commit --allow-empty -m $1
+fi
 
 # Git push
 echo
@@ -27,3 +32,7 @@ echo
 echo "Deploying built site with Grunt..."
 echo
 grunt -v deploy
+
+echo "Deployed Successfully!"
+
+exit 0
