@@ -90,6 +90,11 @@ scholar:
 
   repository: /papers/
 
+# Gravatar
+author:
+
+  email: barry.ridge@gmail.com
+
 # -----------------------------------------------------------------------------
 # Other advanced settings (don't touch if you are not sure)
 # -----------------------------------------------------------------------------

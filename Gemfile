@@ -8,3 +8,6 @@ gem 'github-pages'
 # Added these to get al-folio working
 gem 'jekyll-scholar'
 gem 'pygments.rb'
+
+# Needed for converting Gravatar to favicons
+gem 'rmagick'
