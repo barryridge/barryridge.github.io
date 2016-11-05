@@ -1,6 +1,13 @@
 #!/usr/bin/env sh
-
+#
+# deploy [commit message]
+# 
 # Run this script from site root to deploy to Github Pages.
+#
+# Optional arguments
+#
+#   [commit message] - The commit message for the source repository.
+#
 
 # Build site with Grunt
 echo "Building site with Grunt..."
@@ -22,17 +29,17 @@ else
 fi
 
 # Git push
-# echo
-# echo "Pushing source changes..."
-# echo
-# git push origin source
-# 
-# # Grunt deploy
-# echo
-# echo "Deploying built site with Grunt..."
-# echo
-# grunt -v deploy
-# 
-# echo "Deployed Successfully!"
-# 
-# exit 0
+echo
+echo "Pushing source changes..."
+echo
+git push origin source
+ 
+# Grunt deploy
+echo
+echo "Deploying built site with Grunt..."
+echo
+grunt -v deploy
+
+echo "Deployed Successfully!"
+
+exit 0
